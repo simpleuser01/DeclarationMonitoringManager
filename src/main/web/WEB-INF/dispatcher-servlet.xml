@@ -36,6 +36,9 @@
             <list>
                 <value>com.company.DeclrMonManager.model.User</value>
                 <value>com.company.DeclrMonManager.model.Claim</value>
+                <value>com.company.DeclrMonManager.model.Proxy</value>
+                <value>com.company.DeclrMonManager.model.Contract</value>
+                <value>com.company.DeclrMonManager.model.StateCertificate</value>
             </list>
         </property>
         <property name="hibernateProperties">

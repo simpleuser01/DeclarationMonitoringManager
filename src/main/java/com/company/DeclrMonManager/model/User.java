@@ -61,9 +61,21 @@ public class User {
     @PrimaryKeyJoinColumn(name = "proxy_id")
     com.company.DeclrMonManager.model.Proxy proxy;
 
+
+    @OneToOne
+    @PrimaryKeyJoinColumn(name = "certificate_id")
+    StateCertificate stateCertificate;
+
     public User() {
     }
 
+    public StateCertificate getStateCertificate() {
+        return stateCertificate;
+    }
+
+    public void setStateCertificate(StateCertificate stateCertificate) {
+        this.stateCertificate = stateCertificate;
+    }
     public Contract getContract() {
         return contract;
     }
