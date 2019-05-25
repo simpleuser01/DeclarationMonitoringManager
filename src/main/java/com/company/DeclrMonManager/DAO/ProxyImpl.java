@@ -25,4 +25,10 @@ public class ProxyImpl implements DocumentsDao<Proxy> {
         Proxy proxy = session.load(Proxy.class, new Integer(id));
         return proxy;
     }
+
+    @Override
+    public void editDocument(Proxy doc) {
+        Session session = sessionFactory.getCurrentSession();
+        session.update(doc);
+    }
 }

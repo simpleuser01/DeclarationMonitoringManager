@@ -24,4 +24,10 @@ public class StateCertificateImpl implements DocumentsDao<StateCertificate> {
 
         return stateCertificate;
     }
+
+    @Override
+    public void editDocument(StateCertificate doc) {
+        Session session = sessionFactory.getCurrentSession();
+        session.update(doc);
+    }
 }

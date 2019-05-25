@@ -26,4 +26,10 @@ public class ClaimDaoImpl implements DocumentsDao<Claim> {
 
         return claim;
     }
+
+    @Override
+    public void editDocument(Claim doc) {
+        Session session = sessionFactory.getCurrentSession();
+        session.update(doc);
+    }
 }

@@ -26,6 +26,7 @@
             <th>state agency</th>
             <th>state agency date</th>
             <th>info</th>
+            <th>edit</th>
             <th>delete user</th>
         </tr>
 
@@ -41,6 +42,7 @@
                 <td>${user.birthDate}</td>
                 <td>${user.stateAgency}</td>
                 <td>${user.dateStateAgency}</td>
+                <td><a href="">edit</a></td>
             </tr>
         </c:forEach>
     </table>

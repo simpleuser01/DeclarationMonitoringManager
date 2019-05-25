@@ -18,7 +18,7 @@ public class MainController {
     @Autowired
     UserService userService;
     @Autowired
-    DocumentsService<Claim> documentsService;
+    DocumentsService<Claim> claimService;
     @Autowired
     DocumentsService<Contract> contractService;
     @Autowired
@@ -53,10 +53,31 @@ public class MainController {
 
      @RequestMapping(value = "/users/add/documents/new", method = RequestMethod.POST)
     public String getClaim(@ModelAttribute Claim claim, @ModelAttribute Contract contract, @ModelAttribute Proxy proxy, @ModelAttribute StateCertificate stateCertificate){
-       documentsService.addNewDocument(claim);
+       claimService.addNewDocument(claim);
        contractService.addNewDocument(contract);
        proxyService.addNewDocument(proxy);
        certificateService.addNewDocument(stateCertificate);
+        return "redirect:/users";
+    }
+
+
+    @RequestMapping(value = "/users/edit/{id}")
+    public String edit(@PathVariable("id")int id, Model model){
+        model.addAttribute("user", userService.getById(id));
+        model.addAttribute("claim", claimService.getById(id));
+        model.addAttribute("contract", contractService.getById(id));
+        model.addAttribute("proxy", proxyService.getById(id));
+        model.addAttribute("stateCertificate", certificateService.getById(id));
+        return "edit";
+    }
+
+    @RequestMapping(value = "/users/edit")
+    public String editDoc(@ModelAttribute User user,@ModelAttribute Claim claim, @ModelAttribute Contract contract, @ModelAttribute Proxy proxy, @ModelAttribute StateCertificate stateCertificate){
+        userService.editUser(user);
+        claimService.editDocument(claim);
+        contractService.editDocument(contract);
+        proxyService.editDocument(proxy);
+        certificateService.editDocument(stateCertificate);
         return "redirect:/users";
     }
 

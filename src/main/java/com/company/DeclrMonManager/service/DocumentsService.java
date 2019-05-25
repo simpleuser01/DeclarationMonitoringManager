@@ -5,4 +5,6 @@ public interface DocumentsService<T> {
     void addNewDocument(T doc);
 
     T getById(int id);
+
+    void editDocument(T doc);
 }

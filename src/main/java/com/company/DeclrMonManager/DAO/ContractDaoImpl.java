@@ -26,4 +26,10 @@ public class ContractDaoImpl implements DocumentsDao<Contract> {
 
         return contract;
     }
+
+    @Override
+    public void editDocument(Contract doc) {
+        Session session = sessionFactory.getCurrentSession();
+        session.update(doc);
+    }
 }

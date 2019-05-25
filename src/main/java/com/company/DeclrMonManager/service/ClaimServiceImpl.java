@@ -23,4 +23,10 @@ public class ClaimServiceImpl implements DocumentsService<Claim> {
     public Claim getById(int id) {
         return documentsDao.getById(id);
     }
+
+    @Override
+    @Transactional
+    public void editDocument(Claim doc) {
+        documentsDao.editDocument(doc);
+    }
 }

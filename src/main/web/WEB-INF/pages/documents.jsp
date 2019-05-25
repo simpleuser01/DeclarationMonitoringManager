@@ -128,11 +128,11 @@
     </p>
 
 
-    <h1>ADD NEW PROXY</h1>
+    <h1>ADD NEW STATE SERTIFICATE</h1>
 
     <p>
         id
-        <input type="text" name="certificationId" value="${user.userId}">
+        <input type="text" name="certificateId" value="${user.userId}">
     </p>
     <p>
         unic state number

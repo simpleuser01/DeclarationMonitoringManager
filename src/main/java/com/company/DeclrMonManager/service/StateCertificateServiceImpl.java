@@ -24,4 +24,10 @@ public class StateCertificateServiceImpl implements DocumentsService<StateCertif
     public StateCertificate getById(int id) {
         return documentsDao.getById(id);
     }
+
+    @Override
+    @Transactional
+    public void editDocument(StateCertificate doc) {
+        documentsDao.editDocument(doc);
+    }
 }

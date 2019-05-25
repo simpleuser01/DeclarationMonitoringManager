@@ -7,4 +7,6 @@ public interface DocumentsDao<T> {
     void addNewDocument(T doc);
 
     T getById(int id);
+
+    void editDocument(T doc);
 }

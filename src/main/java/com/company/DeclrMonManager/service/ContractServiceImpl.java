@@ -24,4 +24,10 @@ public class ContractServiceImpl implements DocumentsService<Contract> {
     public Contract getById(int id) {
         return documentsDao.getById(id);
     }
+
+    @Override
+    @Transactional
+    public void editDocument(Contract doc) {
+        documentsDao.editDocument(doc);
+    }
 }

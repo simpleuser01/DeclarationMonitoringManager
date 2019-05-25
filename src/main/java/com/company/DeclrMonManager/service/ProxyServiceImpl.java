@@ -24,4 +24,10 @@ public class ProxyServiceImpl implements DocumentsService<Proxy> {
     public Proxy getById(int id) {
         return documentsDao.getById(id);
     }
+
+    @Override
+    @Transactional
+    public void editDocument(Proxy doc) {
+        documentsDao.editDocument(doc);
+    }
 }
