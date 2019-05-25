@@ -81,6 +81,21 @@ public class MainController {
         return "redirect:/users";
     }
 
+    @RequestMapping(value = "/users/info/{id}")
+    public String info(@PathVariable("id")int id, Model model){
+        model.addAttribute("user", userService.getById(id));
+        model.addAttribute("claim", claimService.getById(id));
+        model.addAttribute("contract", contractService.getById(id));
+        model.addAttribute("proxy", proxyService.getById(id));
+        model.addAttribute("stateCertificate", certificateService.getById(id));
+        return "info";
+    }
+
+    @RequestMapping(value = "/users/info")
+    public String infoBack(){
+        return "redirect:/users";
+    }
+
    /* @RequestMapping(value = "/users/info/claim/{id}", method = RequestMethod.POST)
     public String addClaim(@PathVariable("id") int id, @ModelAttribute Claim claim){
         documentsService.addNewDocument(claim);

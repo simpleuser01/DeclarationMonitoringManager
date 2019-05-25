@@ -11,7 +11,9 @@
     <title>Title</title>
 </head>
 <body>
+<h1>USER INFO</h1>
 <table>
+
     <tr>
         <th>id</th>
         <th>first name</th>
@@ -40,10 +42,95 @@
             <td>${user.dateStateAgency}</td>
 
         </tr>
+</table>
+<h1>CLAIM INFO</h1>
+<table>
 
+    <tr>
+        <th>id</th>
+        <th>first name</th>
+        <th>last name</th>
+        <th>patronymic</th>
+        <th>sign start date</th>
+        <th>sign end date</th>
+        <th>sign ident number</th>
+
+    </tr>
+
+    <tr>
+        <td>${user.userId}</td>
+        <td>${user.firstName}</td>
+        <td>${user.lastName}</td>
+        <td>${user.patronymic}</td>
+        <td>${user.claim.signStartDate}</td>
+        <td>${user.claim.signEndDate}</td>
+        <td>${user.claim.signIdentNumber}</td>
+
+
+    </tr>
+</table>
+<h1>CONTRACT INFO</h1>
+
+<table>
+    <tr>
+        <th>id</th>
+        <th>work name</th>
+        <th>work address</th>
+        <th>work start date</th>
+        <th>work end date</th>
+    </tr>
+
+    <tr>
+        <td>${user.userId}</td>
+        <td>${user.contract.workName}</td>
+        <td>${user.contract.workAddress}</td>
+        <td>${user.contract.workStartDate}</td>
+        <td>${user.contract.workEndDate}</td>
+    </tr>
 </table>
 
+<h1>PROXY INFO</h1>
 
-<a href="">add claim</a>
+<table>
+
+    <tr>
+        <th>id</th>
+        <th>first name</th>
+        <th>last name</th>
+        <th>patronymic</th>
+        <th>start date</th>
+        <th>end date</th>
+    </tr>
+
+    <tr>
+        <td>${user.userId}</td>
+        <td>${user.firstName}</td>
+        <td>${user.lastName}</td>
+        <td>${user.patronymic}</td>
+        <td>${user.proxy.startDate}</td>
+        <td>${user.proxy.endDate}</td>
+    </tr>
+</table>
+
+<h1>STATE CERTIFICATE INFO</h1>
+
+<table>
+
+    <tr>
+        <th>id</th>
+        <th>unic state number</th>
+        <th>organization address</th>
+        <th>organization name</th>
+    </tr>
+
+    <tr>
+        <td>${user.userId}</td>
+        <td>${user.stateCertificate.unicStateNumber}</td>
+        <td>${user.stateCertificate.organizationAddress}</td>
+        <td>${user.stateCertificate.organizationName}</td>
+    </tr>
+</table>
+
+<a href="/users/info">back</a>
 </body>
 </html>
