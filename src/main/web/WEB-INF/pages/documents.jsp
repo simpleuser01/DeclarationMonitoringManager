@@ -98,6 +98,35 @@
         <input type="date" name="workEndDate">
     </p>
 
+
+
+    <h1>ADD NEW PROXY</h1>
+
+    <p>
+        id
+        <input type="text" name="proxyId" value="${user.userId}">
+    </p>
+    <p>
+        first name
+        <input type="text" name="firstName">
+    </p>
+    <p>
+        last name
+        <input type="text" name="lastName">
+    </p>
+    <p>
+        patronymic
+        <input type="text" name="patronymic">
+    </p>
+    <p>
+        start date
+        <input type="date" name="startDate">
+    </p>
+    <p>
+        end date
+        <input type="date" name="endDate">
+    </p>
+
     <input type="submit" value="add">
 </form>
 
