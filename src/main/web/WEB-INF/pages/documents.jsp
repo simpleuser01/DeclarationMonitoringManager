@@ -127,6 +127,27 @@
         <input type="date" name="endDate">
     </p>
 
+
+    <h1>ADD NEW PROXY</h1>
+
+    <p>
+        id
+        <input type="text" name="certificationId" value="${user.userId}">
+    </p>
+    <p>
+        unic state number
+        <input type="text" name="unicStateNumber">
+    </p>
+    <p>
+       organization address
+        <input type="text" name="organizationAddress">
+    </p>
+    <p>
+        organization name
+        <input type="text" name="organizationName">
+    </p>
+
+
     <input type="submit" value="add">
 </form>
 
