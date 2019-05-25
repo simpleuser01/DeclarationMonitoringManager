@@ -53,6 +53,10 @@ public class User {
     @PrimaryKeyJoinColumn(name = "claim_id")
     Claim claim;
 
+    @OneToOne
+    @PrimaryKeyJoinColumn(name = "contract_id")
+    Contract contract;
+
     public Claim getClaim() {
         return claim;
     }
