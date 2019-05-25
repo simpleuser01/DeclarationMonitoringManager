@@ -79,7 +79,7 @@
 
     <p>
         id
-        <input type="text" name="contractId">
+        <input type="text" name="contractId" value="${user.userId}">
     </p>
     <p>
         work name
@@ -91,7 +91,7 @@
     </p>
     <p>
         work start date
-        <input type="text" name="workStartDate" >
+        <input type="date" name="workStartDate" >
     </p>
     <p>
         sign start
