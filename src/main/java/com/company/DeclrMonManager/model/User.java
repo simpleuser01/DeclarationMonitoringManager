@@ -57,6 +57,31 @@ public class User {
     @PrimaryKeyJoinColumn(name = "contract_id")
     Contract contract;
 
+    @OneToOne
+    @PrimaryKeyJoinColumn(name = "proxy_id")
+    com.company.DeclrMonManager.model.Proxy proxy;
+
+    public User() {
+    }
+
+    public Contract getContract() {
+        return contract;
+    }
+
+    public void setContract(Contract contract) {
+        this.contract = contract;
+    }
+
+    public com.company.DeclrMonManager.model.Proxy getProxy() {
+        return proxy;
+    }
+
+    public void setProxy(com.company.DeclrMonManager.model.Proxy proxy) {
+        this.proxy = proxy;
+    }
+
+
+
     public Claim getClaim() {
         return claim;
     }
@@ -65,8 +90,7 @@ public class User {
         this.claim = claim;
     }
 
-    public User() {
-    }
+
 
     public int getUserId() {
         return userId;

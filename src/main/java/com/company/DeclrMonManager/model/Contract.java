@@ -13,7 +13,7 @@ public class Contract {
 
     @Id
     @Column(name = "contract_id")
-    private String contractId;
+    private int contractId;
 
     @Column(name = "work_name")
     private String workName;
@@ -38,11 +38,11 @@ public class Contract {
     }
 
 
-    public String getContractId() {
+    public int getContractId() {
         return contractId;
     }
 
-    public void setContractId(String contractId) {
+    public void setContractId(int contractId) {
         this.contractId = contractId;
     }
 
