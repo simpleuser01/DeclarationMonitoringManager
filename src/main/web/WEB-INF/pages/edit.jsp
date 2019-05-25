@@ -12,7 +12,7 @@
 </head>
 <body>
 <h1>ADD NEW CLAIM</h1>
-<form action="" method="post">
+<form action="/users/edit" method="post">
 
     <p>first name<input type="text" name="firstName" value="${user.firstName}"></p>
     <p>last name <input type="text" name="lastName" value="${user.lastName}"></p>

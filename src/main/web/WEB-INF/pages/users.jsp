@@ -42,7 +42,7 @@
                 <td>${user.birthDate}</td>
                 <td>${user.stateAgency}</td>
                 <td>${user.dateStateAgency}</td>
-                <td><a href="">edit</a></td>
+                <td><a href="/users/edit/${user.userId}">edit</a></td>
             </tr>
         </c:forEach>
     </table>
