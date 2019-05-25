@@ -2,6 +2,7 @@ package com.company.DeclrMonManager.controller;
 
 
 import com.company.DeclrMonManager.model.Claim;
+import com.company.DeclrMonManager.model.Contract;
 import com.company.DeclrMonManager.model.User;
 import com.company.DeclrMonManager.service.DocumentsService;
 import com.company.DeclrMonManager.service.UserService;
@@ -20,6 +21,8 @@ public class MainController {
     UserService userService;
     @Autowired
     DocumentsService<Claim> documentsService;
+    @Autowired
+    DocumentsService<Contract> contractService;
 
 
     @RequestMapping(value = "/users")
@@ -47,8 +50,9 @@ public class MainController {
 
 
      @RequestMapping(value = "/users/add/documents/new", method = RequestMethod.POST)
-    public String getClaim(@ModelAttribute Claim claim){
+    public String getClaim(@ModelAttribute Claim claim, @ModelAttribute Contract contract){
        documentsService.addNewDocument(claim);
+       contractService.addNewDocument(contract);
         return "redirect:/users";
     }
 

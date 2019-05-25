@@ -74,9 +74,32 @@
         <input type="text" name="signIdentNumber">
     </p>
 
+
+<h1>ADD NEW CONTRACT</h1>
+
+    <p>
+        id
+        <input type="text" name="contractId">
+    </p>
+    <p>
+        work name
+        <input type="text" name="workName">
+    </p>
+    <p>
+        work address
+        <input type="text" name="workAddress" >
+    </p>
+    <p>
+        work start date
+        <input type="text" name="workStartDate" >
+    </p>
+    <p>
+        sign start
+        <input type="date" name="workEndDate">
+    </p>
+
     <input type="submit" value="add">
 </form>
 
-<a href="">add claim</a>
 </body>
 </html>
