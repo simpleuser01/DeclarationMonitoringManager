@@ -25,8 +25,6 @@
         <th>birth date</th>
         <th>state agency</th>
         <th>state agency date</th>
-        <th>info</th>
-        <th>delete user</th>
     </tr>
 
         <tr>
@@ -65,8 +63,6 @@
         <td>${user.claim.signStartDate}</td>
         <td>${user.claim.signEndDate}</td>
         <td>${user.claim.signIdentNumber}</td>
-
-
     </tr>
 </table>
 <h1>CONTRACT INFO</h1>
@@ -104,9 +100,9 @@
 
     <tr>
         <td>${user.userId}</td>
-        <td>${user.firstName}</td>
-        <td>${user.lastName}</td>
-        <td>${user.patronymic}</td>
+        <td>${user.proxy.proxyFirstName}</td>
+        <td>${user.proxy.proxyLastName}</td>
+        <td>${user.proxy.proxyPatronymic}</td>
         <td>${user.proxy.startDate}</td>
         <td>${user.proxy.endDate}</td>
     </tr>

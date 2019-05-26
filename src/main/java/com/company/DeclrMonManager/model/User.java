@@ -1,6 +1,8 @@
 package com.company.DeclrMonManager.model;
 
 
+import org.hibernate.annotations.OptimisticLockType;
+import org.hibernate.annotations.OptimisticLocking;
 import org.hibernate.annotations.Proxy;
 import org.springframework.format.annotation.DateTimeFormat;
 

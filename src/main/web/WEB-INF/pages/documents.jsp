@@ -51,15 +51,15 @@
     </p>
     <p>
         first name
-        <input type="text" name="firstName" value="${user.firstName}">
+        <input type="text" name="claimFirstName" value="${user.firstName}">
     </p>
     <p>
         last name
-        <input type="text" name="lastName" value="${user.lastName}">
+        <input type="text" name="claimLastName" value="${user.lastName}">
     </p>
     <p>
         patronymic
-        <input type="text" name="patronymic" value="${user.patronymic}">
+        <input type="text" name="claimPatronymic" value="${user.patronymic}">
     </p>
     <p>
         sign start
@@ -108,15 +108,15 @@
     </p>
     <p>
         first name
-        <input type="text" name="firstName">
+        <input type="text" name="proxyFirstName">
     </p>
     <p>
         last name
-        <input type="text" name="lastName">
+        <input type="text" name="proxyLastName">
     </p>
     <p>
         patronymic
-        <input type="text" name="patronymic">
+        <input type="text" name="proxyPatronymic">
     </p>
     <p>
         start date
@@ -128,7 +128,7 @@
     </p>
 
 
-    <h1>ADD NEW STATE SERTIFICATE</h1>
+    <h1>ADD NEW STATE CERTIFICATE</h1>
 
     <p>
         id

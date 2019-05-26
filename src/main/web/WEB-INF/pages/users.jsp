@@ -44,6 +44,7 @@
                 <td>${user.dateStateAgency}</td>
                 <td><a href="/users/info/${user.userId}">info</a></td>
                 <td><a href="/users/edit/${user.userId}">edit</a></td>
+                <td><a href="/users/delete/${user.userId}">delete</a></td>
             </tr>
         </c:forEach>
     </table>

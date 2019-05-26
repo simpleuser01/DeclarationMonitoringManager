@@ -1,5 +1,6 @@
 package com.company.DeclrMonManager.model;
 
+import org.hibernate.annotations.Cascade;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
@@ -13,14 +14,14 @@ public class Claim {
     @Column(name = "claim_id")
     private int claimId;
 
-    @Column(name = "first_name")
-    private String firstName;
+    @Column(name = "claim_first_name")
+    private String claimFirstName;
 
-    @Column(name = "last_name")
-    private String lastName;
+    @Column(name = "claim_last_name")
+    private String claimLastName;
 
-    @Column(name = "patronymic")
-    private String patronymic;
+    @Column(name = "claim_patronymic")
+    private String claimPatronymic;
 
     @Temporal(TemporalType.DATE)
     @Column(name = "sign_start_date")
@@ -49,28 +50,28 @@ public class Claim {
         this.claimId = claimId;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getClaimFirstName() {
+        return claimFirstName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setClaimFirstName(String claimFirstName) {
+        this.claimFirstName = claimFirstName;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getClaimLastName() {
+        return claimLastName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setClaimLastName(String claimLastName) {
+        this.claimLastName = claimLastName;
     }
 
-    public String getPatronymic() {
-        return patronymic;
+    public String getClaimPatronymic() {
+        return claimPatronymic;
     }
 
-    public void setPatronymic(String patronymic) {
-        this.patronymic = patronymic;
+    public void setClaimPatronymic(String claimPatronymic) {
+        this.claimPatronymic = claimPatronymic;
     }
 
     public Date getSignStartDate() {

@@ -11,9 +11,9 @@
     <title>Title</title>
 </head>
 <body>
-<h1>ADD NEW CLAIM</h1>
-<form action="/users/edit" method="post">
-
+<h1>EDIT USER</h1>
+<form action="/users/edit/" method="post">
+    <p>id<input type="text" name="userId" value="${user.userId}"></p>
     <p>first name<input type="text" name="firstName" value="${user.firstName}"></p>
     <p>last name <input type="text" name="lastName" value="${user.lastName}"></p>
     <p>patronymic<input type="text" name="patronymic" value="${user.patronymic}"></p>
@@ -24,7 +24,7 @@
     <p>state_agency<input type="text" name="stateAgency" value="${user.stateAgency}"></p>
     <p>state agency date<input type="date" name="dateStateAgency" value="${user.dateStateAgency}"></p>
 
-    <h1>ADD NEW CLAIM</h1>
+    <h1>EDIT NEW CLAIM</h1>
 
     <p>
         id
@@ -32,15 +32,15 @@
     </p>
     <p>
         first name
-        <input type="text" name="firstName" value="${user.firstName}">
+        <input type="text" name="claimFirstName" value="${user.claim.claimFirstName}">
     </p>
     <p>
         last name
-        <input type="text" name="lastName" value="${user.lastName}">
+        <input type="text" name="claimLastName" value="${user.claim.claimLastName}">
     </p>
     <p>
         patronymic
-        <input type="text" name="patronymic" value="${user.patronymic}">
+        <input type="text" name="claimPatronymic" value="${user.claim.claimPatronymic}">
     </p>
     <p>
         sign start
@@ -56,7 +56,7 @@
     </p>
 
 
-    <h1>ADD NEW CONTRACT</h1>
+    <h1>EDIT CONTRACT</h1>
 
     <p>
         id
@@ -81,7 +81,7 @@
 
 
 
-    <h1>ADD NEW PROXY</h1>
+    <h1>EDIT  PROXY</h1>
 
     <p>
         id
@@ -89,15 +89,15 @@
     </p>
     <p>
         first name
-        <input type="text" name="firstName" value="${user.proxy.firstName}">
+        <input type="text" name="proxyFirstName" value="${user.proxy.proxyFirstName}">
     </p>
     <p>
         last name
-        <input type="text" name="lastName" value="${user.proxy.lastName}">
+        <input type="text" name="proxyLastName" value="${user.proxy.proxyLastName}">
     </p>
     <p>
         patronymic
-        <input type="text" name="patronymic" value="${user.proxy.patronymic}">
+        <input type="text" name="proxyPatronymic" value="${user.proxy.proxyPatronymic}">
     </p>
     <p>
         start date
@@ -109,7 +109,7 @@
     </p>
 
 
-    <h1>ADD NEW STATE CERTIFICATE</h1>
+    <h1>EDIT STATE CERTIFICATE</h1>
 
     <p>
         id
@@ -128,8 +128,7 @@
         <input type="text" name="organizationName" value="${user.stateCertificate.organizationName}">
     </p>
 
-
-    <input type="submit" value="add">
+    <input type="submit" value="edit">
 </form>
 </body>
 </html>
