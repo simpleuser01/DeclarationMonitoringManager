@@ -72,12 +72,12 @@ public class MainController {
     }
 
     @RequestMapping(value = "/users/edit/")
-    public String editDoc(@ModelAttribute User user/*,@ModelAttribute Claim claim, @ModelAttribute Contract contract, @ModelAttribute Proxy proxy, @ModelAttribute StateCertificate stateCertificate*/){
+    public String editDoc(@ModelAttribute User user,@ModelAttribute Claim claim, @ModelAttribute Contract contract, @ModelAttribute Proxy proxy, @ModelAttribute StateCertificate stateCertificate){
         userService.editUser(user);
-       /* claimService.editDocument(claim);
+        claimService.editDocument(claim);
         contractService.editDocument(contract);
         proxyService.editDocument(proxy);
-        certificateService.editDocument(stateCertificate);*/
+        certificateService.editDocument(stateCertificate);
         return "redirect:/users";
     }
 
