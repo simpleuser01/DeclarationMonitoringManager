@@ -79,6 +79,7 @@
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Дата выдачи паспорта</label>
+            <input type="text" name="stateAgency" value="${user.dateStateAgency}">
         </div>
     </fieldset>
 </form>
