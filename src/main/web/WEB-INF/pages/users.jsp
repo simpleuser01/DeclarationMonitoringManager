@@ -39,14 +39,10 @@
 </nav>
 
 <div class="row">
-
-
     <h1>Список пользователей</h1>
-
     <table class="table-hover">
         <tbody>
         <tr class="table-success">
-           <%-- <th>Номер пользователя</th>--%>
             <th>Имя</th>
             <th>Фамилия</th>
             <th>Отчество</th>
@@ -79,7 +75,6 @@
         </c:forEach>
         </tbody>
     </table>
-
     <a class="btn btn-primary" href="/users/add">Добавить нового пользователя</a>
 </div>
 </body>

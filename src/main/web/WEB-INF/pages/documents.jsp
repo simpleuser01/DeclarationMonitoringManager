@@ -64,7 +64,6 @@
     </tbody>
 </table>
 
-
 <form action="/users/add/documents/new" method="post">
     <fieldset>
         <div class="form-group" hidden>
@@ -97,7 +96,7 @@
             <input class="form-control" type="text" name="signIdentNumber">
         </div>
 
-<h1>Добавить новый контракт</h1>
+    <h1>Добавить новый контракт</h1>
         <div class="form-group" hidden>
             <label class="col-form-label col-form-label-lg">Номер контракта</label>
             <input class="form-control" type="text" name="contractId" value="${user.userId}">

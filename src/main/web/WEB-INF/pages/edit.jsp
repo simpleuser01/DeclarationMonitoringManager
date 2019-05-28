@@ -40,7 +40,6 @@
 <div class="row">
 <h1>Редактировать пользователя</h1>
 <form action="/users/edit/" method="post">
-
     <fieldset>
         <div class="form-group" hidden>
             <label class="col-form-label col-form-label-lg">Номер пользователя</label>
@@ -113,7 +112,6 @@
             <input class="form-control" type="text" name="signIdentNumber" value="${user.claim.signIdentNumber}">
         </div>
 
-
     <h1>Редактировать контракт</h1>
         <div class="form-group" hidden>
             <label class="col-form-label col-form-label-lg">Номер контракта</label>
@@ -162,7 +160,6 @@
             <input class="form-control" type="date" name="endDate" value="${user.proxy.endDate}">
         </div>
 
-
     <h1>Редактировать свидетельство государственной регистрации</h1>
         <div class="form-group" hidden>
             <label class="col-form-label col-form-label-lg">Номер свидетельства государственной регистрации</label>
@@ -183,8 +180,6 @@
     <button class="btn btn-primary" type="submit">Редактировать</button>
     </fieldset>
 </form>
-
 </div>
-
 </body>
 </html>
