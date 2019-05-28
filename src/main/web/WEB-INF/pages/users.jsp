@@ -71,6 +71,7 @@
                 <td>${user.dateStateAgency}</td>
                 <td><a href="/users/info/${user.userId}">Информация</a></td>
                 <td><a href="/users/edit/${user.userId}">Редактировать пользователя</a></td>
+                <td><a href="/users/delete/${user.userId}">Информация</a></td>
             </tr>
         </c:forEach>
         </tbody>
