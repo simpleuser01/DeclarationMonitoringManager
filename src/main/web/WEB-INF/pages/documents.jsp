@@ -95,12 +95,8 @@
             <label class="col-form-label col-form-label-lg">Идентификационный номер</label>
             <input class="form-control" type="text" name="signIdentNumber">
         </div>
-    </fieldset>
-
 
 <h1>Добавить новый контракт</h1>
-
-    <fieldset>
         <div class="form-group" hidden>
             <label class="col-form-label col-form-label-lg">Номер контракта</label>
             <input class="form-control" type="text" name="contractId" value="${user.userId}">
@@ -121,14 +117,8 @@
             <label class="col-form-label col-form-label-lg">Дата окончания контракта</label>
             <input class="form-control" type="date" name="workEndDate">
         </div>
-    </fieldset>
-
-
-
 
     <h1>Добавить новую доверенность</h1>
-
-    <fieldset>
         <div class="form-group" hidden>
             <label class="col-form-label col-form-label-lg">Номер доверенности</label>
             <input type="text" name="proxyId" value="${user.userId}">
@@ -153,10 +143,8 @@
             <label class="col-form-label col-form-label-lg">Дата окончания</label>
             <input type="date" name="endDate">
         </div>
-    </fieldset>
 
     <h1>Добавление нового свидетельства государственной регистрации</h1>
-    <fieldset>
         <div class="form-group" hidden>
             <label class="col-form-label col-form-label-lg">Номер свидетельства государственной регистрации</label>
             <input type="text" name="certificateId" value="${user.userId}">
@@ -173,9 +161,8 @@
             <label class="col-form-label col-form-label-lg">Название организации</label>
             <input type="text" name="organizationName">
         </div>
-
+        <button class="btn btn-primary" type="submit">Добавить документы</button>
     </fieldset>
-    <button class="btn btn-primary" type="submit">Добавить документы</button>
 </form>
 </div>
 </body>
