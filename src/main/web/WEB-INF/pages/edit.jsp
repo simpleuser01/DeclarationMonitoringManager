@@ -28,7 +28,7 @@
                 <a class="nav-link" href="./WEB-INF/pages/claim.jsp">Заявления</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="./WEB-INF/pages/users.jsp">Пользователи</a>
+                <a class="nav-link" href="/users">Пользователи</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="./WEB-INF/pages/info.jsp">Информация</a>
@@ -39,6 +39,7 @@
 
 <h1>Редактировать пользователя</h1>
 <form action="/users/edit/" method="post">
+<form>
     <fieldset>
         <div class="form-group" hidden>
             <label class="col-form-label col-form-label-lg">Номер пользователя</label>
@@ -78,9 +79,7 @@
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Дата выдачи паспорта</label>
-            <input type="date" name="dateStateAgency" value="${user.dateStateAgency}">
         </div>
-        <button class="btn btn-primary" type="submit" value="add">Редактировать пользователя</button>
     </fieldset>
 </form>
 
@@ -107,7 +106,6 @@
             <label class="col-form-label col-form-label-lg">Дата окончания контракта</label>
             <input type="date" name="workEndDate" value="${user.contract.workEndDate}">
         </div>
-        <button class="btn btn-primary" type="submit" value="add">Редактировать контракт</button>
     </fieldset>
 </form>
 
@@ -138,7 +136,7 @@
             <label class="col-form-label col-form-label-lg">Дата окончания</label>
             <input type="date" name="endDate" value="${user.proxy.endDate}">
         </div>
-        <button class="btn btn-primary" type="submit" value="add">Редактировать доверенность</button>
+
     </fieldset>
 </form>
 
@@ -162,8 +160,9 @@
             <label class="col-form-label col-form-label-lg">Название организации</label>
             <input type="text" name="organizationName" value="${user.stateCertificate.organizationName}">
         </div>
-        <button class="btn btn-primary" type="submit" value="add">Редактировать свидетельство государственной регистрации</button>
     </fieldset>
+</form>
+    <button class="btn btn-primary" type="submit" value="add">Редактировать</button>
 </form>
 
 </body>
