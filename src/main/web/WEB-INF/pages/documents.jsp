@@ -31,6 +31,7 @@
     </div>
 </nav>
 
+<div class="row">
 <h1>Добавить пользователя</h1>
 
 <table class="table-hover">
@@ -176,6 +177,6 @@
     </fieldset>
     <button class="btn btn-primary" type="submit">Добавить документы</button>
 </form>
-
+</div>
 </body>
 </html>

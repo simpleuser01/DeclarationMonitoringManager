@@ -37,6 +37,7 @@
     </div>
 </nav>
 
+<div class="row">
 <h1>Пользователи</h1>
 <table class="table-hover">
     <tbody>
@@ -154,7 +155,7 @@
     </tr>
     </tbody>
 </table>
-
-<a class="btn btn-primary" href="/users/info">Назад</a>
+    <a class="btn btn-primary" href="/users/info">Назад</a>
+</div>
 </body>
 </html>

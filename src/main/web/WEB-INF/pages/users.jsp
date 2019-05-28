@@ -38,6 +38,9 @@
     </div>
 </nav>
 
+<div class="row">
+
+
     <h1>Список пользователей</h1>
 
     <table class="table-hover">
@@ -78,5 +81,6 @@
     </table>
 
     <a class="btn btn-primary" href="/users/add">Добавить нового пользователя</a>
+</div>
 </body>
 </html>

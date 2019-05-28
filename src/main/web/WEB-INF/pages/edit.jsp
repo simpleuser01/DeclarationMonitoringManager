@@ -37,6 +37,7 @@
     </div>
 </nav>
 
+
 <h1>Редактировать пользователя</h1>
 <form action="/users/edit/" method="post">
 
@@ -172,10 +173,8 @@
 
     </fieldset>
 
-
-
+    <div class="row">
     <h1>Редактировать свидетельство государственной регистрации</h1>
-
     <fieldset>
         <div class="form-group" hidden>
             <label class="col-form-label col-form-label-lg">Номер свидетельства государственной регистрации</label>
@@ -196,5 +195,7 @@
     </fieldset>
     <button class="btn btn-primary" type="submit">Редактировать</button>
 </form>
+</div>
+
 </body>
 </html>
