@@ -41,7 +41,7 @@
 <table class="table-hover">
     <tbody>
     <tr class="table-success">
-        <th>id</th>
+        <th>Номер пользователя</th>
         <th>Имя</th>
         <th>Фамилия</th>
         <th>Отчество</th>
@@ -63,7 +63,6 @@
         <td>${user.birthDate}</td>
         <td>${user.stateAgency}</td>
         <td>${user.dateStateAgency}</td>
-
     </tr>
     </tbody>
 </table>
@@ -73,7 +72,7 @@
 <table class="table-hover">
 <tbody>
 <tr class="table-success">
-    <th>id</th>
+    <th>Номер заявления</th>
     <th>Имя</th>
     <th>Фамилия</th>
     <th>Отчество</th>
@@ -98,7 +97,7 @@
 <table class="table-hover">
     <tbody>
     <tr class="table-success">
-        <th>id</th>
+        <th>Номер контракта</th>
         <th>Название организации</th>
         <th>Адрес организации</th>
         <th>Дата начала контракта</th>
@@ -119,7 +118,7 @@
 <table class="table-hover">
     <tbody>
     <tr class="table-success">
-        <th>id</th>
+        <th>Номер доверенности</th>
         <th>Имя</th>
         <th>Фамилия</th>
         <th>Отчество</th>
@@ -142,7 +141,7 @@
 <table class="table-hover">
     <tbody>
     <tr class="table-success">
-        <th>id</th>
+        <th>Номер свидетельства государственной регистрации</th>
         <th>УНП</th>
         <th>Адрес организации</th>
         <th>Название организации</th>

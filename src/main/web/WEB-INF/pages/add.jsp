@@ -14,6 +14,29 @@
     <link rel="stylesheet" href="../../style/bootstrap.css">
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="./index.jsp">Мониторинг декларантов</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="./WEB-INF/pages/documents.jsp">Документы</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./WEB-INF/pages/claim.jsp">Заявления</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./WEB-INF/pages/users.jsp">Пользователи</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./WEB-INF/pages/info.jsp">Информация</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
 <div class="row">
     <form action="/users/add" method="post">
         <fieldset>

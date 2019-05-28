@@ -43,7 +43,7 @@
     <table class="table-hover">
         <tbody>
         <tr class="table-success">
-            <th>id</th>
+            <th>Номер пользователя</th>
             <th>Имя</th>
             <th>Фамилия</th>
             <th>Отчество</th>
@@ -69,8 +69,8 @@
                 <td>${user.birthDate}</td>
                 <td>${user.stateAgency}</td>
                 <td>${user.dateStateAgency}</td>
-                <td><a href="/users/info/${user.userId}">info</a></td>
-                <td><a href="/users/edit/${user.userId}">edit</a></td>
+                <td><a href="/users/info/${user.userId}">Информация</a></td>
+                <td><a href="/users/edit/${user.userId}">Редактировать пользователя</a></td>
             </tr>
         </c:forEach>
         </tbody>

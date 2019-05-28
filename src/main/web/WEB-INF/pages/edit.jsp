@@ -41,7 +41,7 @@
 <form action="/users/edit/" method="post">
     <fieldset>
         <div class="form-group">
-            <label class="col-form-label col-form-label-lg">id</label>
+            <label class="col-form-label col-form-label-lg">Номер пользователя</label>
             <input type="text" name="userId" value="${user.userId}">
         </div>
         <div class="form-group">
@@ -88,7 +88,7 @@
 <form>
     <fieldset>
         <div class="form-group">
-            <label class="col-form-label col-form-label-lg">id</label>
+            <label class="col-form-label col-form-label-lg">Номер контракта</label>
             <input type="text" name="contractId" value="${user.userId}">
         </div>
         <div class="form-group">
@@ -115,7 +115,7 @@
 <form>
     <fieldset>
         <div class="form-group">
-            <label class="col-form-label col-form-label-lg">id</label>
+            <label class="col-form-label col-form-label-lg">Номер доверенности</label>
             <input type="text" name="proxyId" value="${user.userId}">
         </div>
         <div class="form-group">
@@ -147,7 +147,7 @@
 <form>
     <fieldset>
         <div class="form-group">
-            <label class="col-form-label col-form-label-lg">id</label>
+            <label class="col-form-label col-form-label-lg">Номер свидетельства государственной регистрации</label>
             <input type="text" name="certificateId" value="${user.userId}">
         </div>
         <div class="form-group">
