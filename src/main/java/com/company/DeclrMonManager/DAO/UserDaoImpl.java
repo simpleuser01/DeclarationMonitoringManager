@@ -1,11 +1,13 @@
 package com.company.DeclrMonManager.DAO;
 
 import com.company.DeclrMonManager.model.User;
+import org.hibernate.LockMode;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import javax.persistence.LockModeType;
 import java.util.List;
 
 @Repository
@@ -25,7 +27,7 @@ public class UserDaoImpl implements UserDao {
     @Override
     public User getById(int id) {
         Session session = sessionFactory.getCurrentSession();
-        User user = session.load(User.class, new Integer(id));
+        User user = session.load(User.class, new  Integer(id));
 
         return user;
     }
@@ -34,6 +36,13 @@ public class UserDaoImpl implements UserDao {
     public void editUser(User user) {
         Session session = sessionFactory.getCurrentSession();
         session.update(user);
+    }
+
+    @Override
+    public void deleteUser(int id) {
+        Session session = sessionFactory.getCurrentSession();
+        User user = session.load(User.class, new Integer(id));
+        session.delete(user);
     }
 
     @Override

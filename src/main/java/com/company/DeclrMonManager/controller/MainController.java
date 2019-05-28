@@ -64,20 +64,20 @@ public class MainController {
     @RequestMapping(value = "/users/edit/{id}")
     public String edit(@PathVariable("id")int id, Model model){
         model.addAttribute("user", userService.getById(id));
-        model.addAttribute("claim", claimService.getById(id));
+       /* model.addAttribute("claim", claimService.getById(id));
         model.addAttribute("contract", contractService.getById(id));
         model.addAttribute("proxy", proxyService.getById(id));
-        model.addAttribute("stateCertificate", certificateService.getById(id));
+        model.addAttribute("stateCertificate", certificateService.getById(id));*/
         return "edit";
     }
 
-    @RequestMapping(value = "/users/edit")
-    public String editDoc(@ModelAttribute User user,@ModelAttribute Claim claim, @ModelAttribute Contract contract, @ModelAttribute Proxy proxy, @ModelAttribute StateCertificate stateCertificate){
+    @RequestMapping(value = "/users/edit/")
+    public String editDoc(@ModelAttribute User user/*,@ModelAttribute Claim claim, @ModelAttribute Contract contract, @ModelAttribute Proxy proxy, @ModelAttribute StateCertificate stateCertificate*/){
         userService.editUser(user);
-        claimService.editDocument(claim);
+       /* claimService.editDocument(claim);
         contractService.editDocument(contract);
         proxyService.editDocument(proxy);
-        certificateService.editDocument(stateCertificate);
+        certificateService.editDocument(stateCertificate);*/
         return "redirect:/users";
     }
 
@@ -95,6 +95,15 @@ public class MainController {
     public String infoBack(){
         return "redirect:/users";
     }
+
+
+    @RequestMapping(value = "/users/delete/{id}")
+    public String deleteUser(@PathVariable("id") int id){
+
+        userService.deleteUser(id);
+        return "redirect:/users";
+    }
+
 
    /* @RequestMapping(value = "/users/info/claim/{id}", method = RequestMethod.POST)
     public String addClaim(@PathVariable("id") int id, @ModelAttribute Claim claim){

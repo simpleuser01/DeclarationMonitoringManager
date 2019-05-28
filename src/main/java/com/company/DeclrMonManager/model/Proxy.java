@@ -13,14 +13,14 @@ public class Proxy {
     @Column(name = "proxy_id")
     private int proxyId;
 
-    @Column(name = "first_name")
-    private String firstName;
+    @Column(name = "proxy_first_name")
+    private String proxyFirstName;
 
-    @Column(name = "last_name")
-    private String lastName;
+    @Column(name = "proxy_last_name")
+    private String proxyLastName;
 
-    @Column(name = "patronymic")
-    private String patronymic;
+    @Column(name = "proxy_patronymic")
+    private String proxyPatronymic;
 
 
     @Column(name = "start_date")
@@ -47,28 +47,28 @@ public class Proxy {
         this.proxyId = proxyId;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getProxyFirstName() {
+        return proxyFirstName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setProxyFirstName(String proxyFirstName) {
+        this.proxyFirstName = proxyFirstName;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getProxyLastName() {
+        return proxyLastName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setProxyLastName(String proxyLastName) {
+        this.proxyLastName = proxyLastName;
     }
 
-    public String getPatronymic() {
-        return patronymic;
+    public String getProxyPatronymic() {
+        return proxyPatronymic;
     }
 
-    public void setPatronymic(String patronymic) {
-        this.patronymic = patronymic;
+    public void setProxyPatronymic(String proxyPatronymic) {
+        this.proxyPatronymic = proxyPatronymic;
     }
 
     public Date getStartDate() {

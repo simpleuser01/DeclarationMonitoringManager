@@ -1,8 +1,8 @@
 CREATE TABLE `claim` (
   `claim_id` int(11) NOT NULL,
-  `first_name` char(100) NOT NULL,
-  `last_name` char(100) NOT NULL,
-  `patronymic` char(100) NOT NULL,
+  `claim_first_name` char(100) NOT NULL,
+  `claim_last_name` char(100) NOT NULL,
+  `claim_patronymic` char(100) NOT NULL,
   `sign_start_date` date NOT NULL,
   `sign_end_date` date NOT NULL,
   `sign_ident_number` int(10) NOT NULL,
