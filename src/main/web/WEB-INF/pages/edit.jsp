@@ -80,11 +80,9 @@
             <label class="col-form-label col-form-label-lg">Дата выдачи паспорта</label>
             <input type="date" name="dateStateAgency" value="${user.dateStateAgency}">
         </div>
+        <button class="btn btn-primary" type="submit" value="add">Редактировать пользователя</button>
     </fieldset>
-
-
-
-
+</form>
 
     <h1>Редактировать контракт</h1>
 <form>
@@ -109,6 +107,7 @@
             <label class="col-form-label col-form-label-lg">Дата окончания контракта</label>
             <input type="date" name="workEndDate" value="${user.contract.workEndDate}">
         </div>
+        <button class="btn btn-primary" type="submit" value="add">Редактировать контракт</button>
     </fieldset>
 </form>
 
@@ -139,6 +138,7 @@
             <label class="col-form-label col-form-label-lg">Дата окончания</label>
             <input type="date" name="endDate" value="${user.proxy.endDate}">
         </div>
+        <button class="btn btn-primary" type="submit" value="add">Редактировать доверенность</button>
     </fieldset>
 </form>
 
@@ -162,10 +162,9 @@
             <label class="col-form-label col-form-label-lg">Название организации</label>
             <input type="text" name="organizationName" value="${user.stateCertificate.organizationName}">
         </div>
-        <input class="btn btn-primary" type="submit" value="edit">
+        <button class="btn btn-primary" type="submit" value="add">Редактировать свидетельство государственной регистрации</button>
     </fieldset>
 </form>
 
-</form>
 </body>
 </html>
