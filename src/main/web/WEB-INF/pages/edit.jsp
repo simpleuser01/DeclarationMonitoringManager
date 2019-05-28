@@ -39,7 +39,7 @@
 
 <h1>Редактировать пользователя</h1>
 <form action="/users/edit/" method="post">
-<form>
+
     <fieldset>
         <div class="form-group" hidden>
             <label class="col-form-label col-form-label-lg">Номер пользователя</label>
@@ -79,13 +79,46 @@
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Дата выдачи паспорта</label>
-            <input type="text" name="stateAgency" value="${user.dateStateAgency}">
+            <input type="date" name="dateStateAgency" value="${user.dateStateAgency}">
         </div>
     </fieldset>
-</form>
+
+    <h1>Редактировать заявление</h1>
+
+    <fieldset>
+        <div class="form-group" hidden>
+            <label class="col-form-label col-form-label-lg">Номер пользователя</label>
+            <input type="text" name="claimId" value="${user.userId}">
+        </div>
+        <div class="form-group">
+            <label class="col-form-label col-form-label-lg">Имя пользователя</label>
+            <input type="text" name="claimFirstName" value="${user.claim.claimFirstName}">
+        </div>
+        <div class="form-group">
+            <label class="col-form-label col-form-label-lg">Фамилия</label>
+            <input type="text" name="claimLastName" value="${user.claim.claimLastName}">
+        </div>
+        <div class="form-group">
+            <label class="col-form-label col-form-label-lg">Отчество</label>
+            <input type="text" name="claimPatronymic" value="${user.claim.claimPatronymic}">
+        </div>
+        <div class="form-group">
+            <label class="col-form-label col-form-label-lg">Дата заполнения</label>
+            <input type="date" name="signStartDate" value="${user.claim.signStartDate}">
+        </div>
+        <div class="form-group">
+            <label class="col-form-label col-form-label-lg">Дата окончания</label>
+            <input type="date" name="signEndDate" value="${user.claim.signEndDate}">
+        </div>
+        <div class="form-group">
+            <label class="col-form-label col-form-label-lg">Идентификационный номер</label>
+            <input type="text" name="signIdentNumber" value="${user.claim.signIdentNumber}">
+        </div>
+    </fieldset>
+
 
     <h1>Редактировать контракт</h1>
-<form>
+
     <fieldset>
         <div class="form-group" hidden>
             <label class="col-form-label col-form-label-lg">Номер контракта</label>
@@ -108,10 +141,9 @@
             <input type="date" name="workEndDate" value="${user.contract.workEndDate}">
         </div>
     </fieldset>
-</form>
 
     <h1>Редактировать доверенность</h1>
-<form>
+
     <fieldset>
         <div class="form-group" hidden>
             <label class="col-form-label col-form-label-lg">Номер доверенности</label>
@@ -139,11 +171,11 @@
         </div>
 
     </fieldset>
-</form>
+
 
 
     <h1>Редактировать свидетельство государственной регистрации</h1>
-<form>
+
     <fieldset>
         <div class="form-group" hidden>
             <label class="col-form-label col-form-label-lg">Номер свидетельства государственной регистрации</label>
@@ -162,9 +194,7 @@
             <input type="text" name="organizationName" value="${user.stateCertificate.organizationName}">
         </div>
     </fieldset>
+    <button class="btn btn-primary" type="submit">Редактировать</button>
 </form>
-    <button class="btn btn-primary" type="submit" value="add">Редактировать</button>
-</form>
-
 </body>
 </html>

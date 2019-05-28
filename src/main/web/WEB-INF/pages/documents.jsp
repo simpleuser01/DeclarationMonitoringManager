@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: talas
-  Date: 23.05.2019
-  Time: 22:58
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -40,7 +33,7 @@
 <table class="table-hover">
     <tbody>
     <tr class="table-success">
-        <th>Номер пользователя</th>
+        <%--<th>Номер пользователя</th>--%>
         <th>Имя</th>
         <th>Фамилия</th>
         <th>Отчество</th>
@@ -50,8 +43,6 @@
         <th>Дата рождения</th>
         <th>Кем выдан паспорт</th>
         <th>Дата выдачи паспорта</th>
-        <th>Информация</th>
-        <th>Удалить пользователя</th>
     </tr>
     <tr class="table-light">
         <td hidden>${user.userId}</td>
@@ -72,21 +63,21 @@
 <h1>Добавить новое заявление</h1>
 <form action="/users/add/documents/new" method="post">
     <fieldset>
-        <div class="form-group">
+        <div class="form-group" hidden>
             <label class="col-form-label col-form-label-lg">номер заявления</label>
             <input type="text" name="claimId" value="${user.userId}">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Имя</label>
-            <input type="text" name="firstName" value="${user.firstName}">
+            <input type="text" name="claimFirstName" value="${user.firstName}">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Фамилия</label>
-            <input type="text" name="lastName" value="${user.lastName}">
+            <input type="text" name="claimLastName" value="${user.lastName}">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Отчество</label>
-            <input type="text" name="patronymic" value="${user.patronymic}">
+            <input type="text" name="claimPatronymic" value="${user.patronymic}">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Дата заполнения</label>
@@ -101,13 +92,12 @@
             <input type="text" name="signIdentNumber">
         </div>
     </fieldset>
-</form>
 
 
 <h1>Добавить новый контракт</h1>
-<form>
+
     <fieldset>
-        <div class="form-group">
+        <div class="form-group" hidden>
             <label class="col-form-label col-form-label-lg">Номер контракта</label>
             <input type="text" name="contractId" value="${user.userId}">
         </div>
@@ -128,28 +118,28 @@
             <input type="date" name="workEndDate">
         </div>
     </fieldset>
-</form>
+
 
 
 
     <h1>Добавить новую доверенность</h1>
-<form>
+
     <fieldset>
-        <div class="form-group">
+        <div class="form-group" hidden>
             <label class="col-form-label col-form-label-lg">Номер доверенности</label>
             <input type="text" name="proxyId" value="${user.userId}">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Имя</label>
-            <input type="text" name="firstName">
+            <input type="text" name="proxyFirstName">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Фамилия</label>
-            <input type="text" name="lastName">
+            <input type="text" name="proxyLastName">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Отчество</label>
-            <input type="text" name="patronymic">
+            <input type="text" name="proxyPatronymic">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Дата заполнения</label>
@@ -160,14 +150,10 @@
             <input type="date" name="endDate">
         </div>
     </fieldset>
-</form>
-
-
 
     <h1>Добавление нового свидетельства государственной регистрации</h1>
-<form>
     <fieldset>
-        <div class="form-group">
+        <div class="form-group" hidden>
             <label class="col-form-label col-form-label-lg">Номер свидетельства государственной регистрации</label>
             <input type="text" name="certificateId" value="${user.userId}">
         </div>
@@ -183,9 +169,9 @@
             <label class="col-form-label col-form-label-lg">Название организации</label>
             <input type="text" name="organizationName">
         </div>
-        <button class="btn btn-primary" type="submit" value="add">Добавить документы</button>
-    </fieldset>
 
+    </fieldset>
+    <button class="btn btn-primary" type="submit">Добавить документы</button>
 </form>
 
 </body>
