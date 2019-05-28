@@ -28,7 +28,7 @@
                 <a class="nav-link" href="./WEB-INF/pages/claim.jsp">Заявления</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="./WEB-INF/pages/users.jsp">Пользователи</a>
+                <a class="nav-link" href="/users">Пользователи</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="./WEB-INF/pages/info.jsp">Информация</a>
@@ -37,13 +37,14 @@
     </div>
 </nav>
 
+<h1>Редактировать пользователя</h1>
 <form action="/users/edit/" method="post">
+<form>
     <fieldset>
         <div class="form-group" hidden>
             <label class="col-form-label col-form-label-lg">Номер пользователя</label>
             <input type="text" name="userId" value="${user.userId}">
         </div>
-        <legend>Редактировать пользователя</legend>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Имя</label>
             <input type="text" name="firstName" value="${user.firstName}">
@@ -78,12 +79,14 @@
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Дата выдачи паспорта</label>
-            <input type="date" name="dateStateAgency" value="${user.dateStateAgency}">
+            <input type="text" name="stateAgency" value="${user.dateStateAgency}">
         </div>
+    </fieldset>
+</form>
 
-
-        <legend>Редактировать контракт</legend>
-
+    <h1>Редактировать контракт</h1>
+<form>
+    <fieldset>
         <div class="form-group" hidden>
             <label class="col-form-label col-form-label-lg">Номер контракта</label>
             <input type="text" name="contractId" value="${user.userId}">
@@ -104,8 +107,12 @@
             <label class="col-form-label col-form-label-lg">Дата окончания контракта</label>
             <input type="date" name="workEndDate" value="${user.contract.workEndDate}">
         </div>
+    </fieldset>
+</form>
 
-        <legend>Редактировать доверенность </legend>
+    <h1>Редактировать доверенность</h1>
+<form>
+    <fieldset>
         <div class="form-group" hidden>
             <label class="col-form-label col-form-label-lg">Номер доверенности</label>
             <input type="text" name="proxyId" value="${user.userId}">
@@ -131,8 +138,13 @@
             <input type="date" name="endDate" value="${user.proxy.endDate}">
         </div>
 
-        <legend>Редактировать свидетельство государственной регистрации</legend>
+    </fieldset>
+</form>
 
+
+    <h1>Редактировать свидетельство государственной регистрации</h1>
+<form>
+    <fieldset>
         <div class="form-group" hidden>
             <label class="col-form-label col-form-label-lg">Номер свидетельства государственной регистрации</label>
             <input type="text" name="certificateId" value="${user.userId}">
@@ -149,8 +161,9 @@
             <label class="col-form-label col-form-label-lg">Название организации</label>
             <input type="text" name="organizationName" value="${user.stateCertificate.organizationName}">
         </div>
-        <button class="btn btn-primary" type="submit" value="add">Редактировать свидетельство государственной регистрации</button>
     </fieldset>
+</form>
+    <button class="btn btn-primary" type="submit" value="add">Редактировать</button>
 </form>
 
 </body>
