@@ -54,7 +54,7 @@
         <th>Удалить пользователя</th>
     </tr>
     <tr class="table-light">
-        <td>${user.userId}</td>
+        <td hidden>${user.userId}</td>
         <td>${user.firstName}</td>
         <td>${user.lastName}</td>
         <td>${user.patronymic}</td>

@@ -38,12 +38,12 @@
     </div>
 </nav>
 
-    <h1>Список пользователей</h1>
+    <h1>Список пользователей</h1
 
     <table class="table-hover">
         <tbody>
         <tr class="table-success">
-            <th>Номер пользователя</th>
+           <%-- <th>Номер пользователя</th>--%>
             <th>Имя</th>
             <th>Фамилия</th>
             <th>Отчество</th>
@@ -59,7 +59,7 @@
         </tr>
         <c:forEach items="${users}" var="user">
             <tr class="table-light">
-                <td>${user.userId}</td>
+                <td hidden>${user.userId}</td>
                 <td>${user.firstName}</td>
                 <td>${user.lastName}</td>
                 <td>${user.patronymic}</td>
@@ -71,7 +71,6 @@
                 <td>${user.dateStateAgency}</td>
                 <td><a href="/users/info/${user.userId}">Информация</a></td>
                 <td><a href="/users/edit/${user.userId}">Редактировать пользователя</a></td>
-                <td><a href="/users/delete/${user.userId}">Информация</a></td>
             </tr>
         </c:forEach>
         </tbody>

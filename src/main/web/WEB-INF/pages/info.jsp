@@ -41,7 +41,7 @@
 <table class="table-hover">
     <tbody>
     <tr class="table-success">
-        <th>Номер пользователя</th>
+       <%-- <th>Номер пользователя</th>--%>
         <th>Имя</th>
         <th>Фамилия</th>
         <th>Отчество</th>
@@ -53,7 +53,7 @@
         <th>Дата выдачи паспорта</th>
     </tr>
     <tr class="table-light">
-        <td>${user.userId}</td>
+        <td hidden>${user.userId}</td>
         <td>${user.firstName}</td>
         <td>${user.lastName}</td>
         <td>${user.patronymic}</td>
@@ -72,7 +72,7 @@
 <table class="table-hover">
 <tbody>
 <tr class="table-success">
-    <th>Номер заявления</th>
+    <%--<th>Номер заявления</th>--%>
     <th>Имя</th>
     <th>Фамилия</th>
     <th>Отчество</th>
@@ -81,7 +81,7 @@
     <th>Идентификационный номер</th>
 </tr>
 <tr class="table-light">
-    <td>${user.userId}</td>
+    <td hidden>${user.userId}</td>
     <td>${user.firstName}</td>
     <td>${user.lastName}</td>
     <td>${user.patronymic}</td>
@@ -97,14 +97,14 @@
 <table class="table-hover">
     <tbody>
     <tr class="table-success">
-        <th>Номер контракта</th>
+       <%-- <th>Номер контракта</th>--%>
         <th>Название организации</th>
         <th>Адрес организации</th>
         <th>Дата начала контракта</th>
         <th>Дата окончания контракта</th>
     </tr>
     <tr class="table-light">
-        <td>${user.userId}</td>
+        <td hidden>${user.userId}</td>
         <td>${user.contract.workName}</td>
         <td>${user.contract.workAddress}</td>
         <td>${user.contract.workStartDate}</td>
@@ -118,7 +118,7 @@
 <table class="table-hover">
     <tbody>
     <tr class="table-success">
-        <th>Номер доверенности</th>
+        <%--<th>Номер доверенности</th>--%>
         <th>Имя</th>
         <th>Фамилия</th>
         <th>Отчество</th>
@@ -126,7 +126,7 @@
         <th>Дата окончания</th>
     </tr>
     <tr class="table-light">
-        <td>${user.userId}</td>
+        <td hidden>${user.userId}</td>
         <td>${user.proxy.proxyFirstName}</td>
         <td>${user.proxy.proxyLastName}</td>
         <td>${user.proxy.proxyPatronymic}</td>
@@ -141,13 +141,13 @@
 <table class="table-hover">
     <tbody>
     <tr class="table-success">
-        <th>Номер свидетельства государственной регистрации</th>
+      <%--  <th>Номер свидетельства государственной регистрации</th>--%>
         <th>УНП</th>
         <th>Адрес организации</th>
         <th>Название организации</th>
     </tr>
     <tr class="table-light">
-        <td>${user.userId}</td>
+        <td hidden>${user.userId}</td>
         <td>${user.stateCertificate.unicStateNumber}</td>
         <td>${user.stateCertificate.organizationAddress}</td>
         <td>${user.stateCertificate.organizationName}</td>
