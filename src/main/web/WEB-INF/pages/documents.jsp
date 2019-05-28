@@ -64,13 +64,14 @@
     </tbody>
 </table>
 
-<h1>Добавить новое заявление</h1>
+
 <form action="/users/add/documents/new" method="post">
     <fieldset>
         <div class="form-group" hidden>
             <label class="col-form-label col-form-label-lg">номер заявления</label>
             <input class="form-control" type="text" name="claimId" value="${user.userId}">
         </div>
+        <h1>Добавить новое заявление</h1>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Имя</label>
             <input class="form-control" type="text" name="claimFirstName" value="${user.firstName}">
