@@ -8,27 +8,52 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Мониторинг декларантов</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <link rel="stylesheet" href="../../style/bootstrap.css">
 </head>
 <body>
-<table>
-    <tr>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="./index.jsp">Мониторинг декларантов</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="./WEB-INF/pages/documents.jsp">Документы</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./WEB-INF/pages/claim.jsp">Заявления</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./WEB-INF/pages/users.jsp">Пользователи</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./WEB-INF/pages/info.jsp">Информация</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<table class="table-hover">
+    <tbody>
+    <tr class="table-success">
         <th>id</th>
-        <th>first name</th>
-        <th>last name</th>
-        <th>patronymic</th>
-        <th>series</th>
-        <th>series number</th>
-        <th>ident number</th>
-        <th>birth date</th>
-        <th>state agency</th>
-        <th>state agency date</th>
-        <th>info</th>
-        <th>delete user</th>
+        <th>Имя</th>
+        <th>Фамилия</th>
+        <th>Отчество</th>
+        <th>Серия паспорта</th>
+        <th>Номер паспорта</th>
+        <th>Идентификационный номер</th>
+        <th>Дата рождения</th>
+        <th>Кем выдан паспорт</th>
+        <th>Дата выдачи паспорта</th>
+        <th>Информация</th>
+        <th>Удалить пользователя</th>
     </tr>
-
-
-    <tr>
+    <tr class="table-light">
         <td>${user.userId}</td>
         <td>${user.firstName}</td>
         <td>${user.lastName}</td>
@@ -41,114 +66,127 @@
         <td>${user.dateStateAgency}</td>
 
     </tr>
+    </tbody>
+
 
 </table>
-<h1>ADD NEW CLAIM</h1>
+<h1>Добавить новое заявление</h1>
 <form action="/users/add/documents/new" method="post">
-    <p>
-        id
-        <input type="text" name="claimId" value="${user.userId}">
-    </p>
-    <p>
-        first name
-        <input type="text" name="firstName" value="${user.firstName}">
-    </p>
-    <p>
-        last name
-        <input type="text" name="lastName" value="${user.lastName}">
-    </p>
-    <p>
-        patronymic
-        <input type="text" name="patronymic" value="${user.patronymic}">
-    </p>
-    <p>
-        sign start
-        <input type="date" name="signStartDate">
-    </p>
-    <p>
-        sign end date
-        <input type="date" name="signEndDate">
-    </p>
-    <p>
-        ident number
-        <input type="text" name="signIdentNumber">
-    </p>
+    <fieldset>
+        <div class="form-group">
+            <label class="col-form-label col-form-label-lg">id</label>
+            <input type="text" name="claimId" value="${user.userId}">
+        </div>
+        <div class="form-group">
+            <label class="col-form-label col-form-label-lg">Имя</label>
+            <input type="text" name="firstName" value="${user.firstName}">
+        </div>
+        <div class="form-group">
+            <label class="col-form-label col-form-label-lg">Фамилия</label>
+            <input type="text" name="lastName" value="${user.lastName}">
+        </div>
+        <div class="form-group">
+            <label class="col-form-label col-form-label-lg">Отчество</label>
+            <input type="text" name="patronymic" value="${user.patronymic}">
+        </div>
+        <div class="form-group">
+            <label class="col-form-label col-form-label-lg">Дата заполнения</label>
+            <input type="date" name="signStartDate">
+        </div>
+        <div class="form-group">
+            <label class="col-form-label col-form-label-lg">Дата окончания</label>
+            <input type="date" name="signEndDate">
+        </div>
+        <div class="form-group">
+            <label class="col-form-label col-form-label-lg">Идентификационный номер</label>
+            <input type="text" name="signIdentNumber">
+        </div>
+    </fieldset>
+</form>
 
 
-<h1>ADD NEW CONTRACT</h1>
-
-    <p>
-        id
-        <input type="text" name="contractId" value="${user.userId}">
-    </p>
-    <p>
-        work name
-        <input type="text" name="workName">
-    </p>
-    <p>
-        work address
-        <input type="text" name="workAddress" >
-    </p>
-    <p>
-        work start date
-        <input type="date" name="workStartDate" >
-    </p>
-    <p>
-        sign start
-        <input type="date" name="workEndDate">
-    </p>
-
-
-
-    <h1>ADD NEW PROXY</h1>
-
-    <p>
-        id
-        <input type="text" name="proxyId" value="${user.userId}">
-    </p>
-    <p>
-        first name
-        <input type="text" name="firstName">
-    </p>
-    <p>
-        last name
-        <input type="text" name="lastName">
-    </p>
-    <p>
-        patronymic
-        <input type="text" name="patronymic">
-    </p>
-    <p>
-        start date
-        <input type="date" name="startDate">
-    </p>
-    <p>
-        end date
-        <input type="date" name="endDate">
-    </p>
+<h1>Добавить новый контракт</h1>
+<form>
+    <fieldset>
+        <div class="form-group">
+            <label class="col-form-label col-form-label-lg">id</label>
+            <input type="text" name="contractId" value="${user.userId}">
+        </div>
+        <div class="form-group">
+            <label class="col-form-label col-form-label-lg">Название организации</label>
+            <input type="text" name="workName">
+        </div>
+        <div class="form-group">
+            <label class="col-form-label col-form-label-lg">Адрес организации</label>
+            <input type="text" name="workAddress" >
+        </div>
+        <div class="form-group">
+            <label class="col-form-label col-form-label-lg">Дата начала работы</label>
+            <input type="date" name="workStartDate" >
+        </div>
+        <div class="form-group">
+            <label class="col-form-label col-form-label-lg">Дата окончания контракта</label>
+            <input type="date" name="workEndDate">
+        </div>
+    </fieldset>
+</form>
 
 
-    <h1>ADD NEW STATE SERTIFICATE</h1>
 
-    <p>
-        id
-        <input type="text" name="certificateId" value="${user.userId}">
-    </p>
-    <p>
-        unic state number
-        <input type="text" name="unicStateNumber">
-    </p>
-    <p>
-       organization address
-        <input type="text" name="organizationAddress">
-    </p>
-    <p>
-        organization name
-        <input type="text" name="organizationName">
-    </p>
+    <h1>Добавить новую доверенность</h1>
+<form>
+    <fieldset>
+        <div class="form-group">
+            <label class="col-form-label col-form-label-lg">id</label>
+            <input type="text" name="proxyId" value="${user.userId}">
+        </div>
+        <div class="form-group">
+            <label class="col-form-label col-form-label-lg">Имя</label>
+            <input type="text" name="firstName">
+        </div>
+        <div class="form-group">
+            <label class="col-form-label col-form-label-lg">Фамилия</label>
+            <input type="text" name="lastName">
+        </div>
+        <div class="form-group">
+            <label class="col-form-label col-form-label-lg">Отчество</label>
+            <input type="text" name="patronymic">
+        </div>
+        <div class="form-group">
+            <label class="col-form-label col-form-label-lg">Дата заполнения</label>
+            <input type="date" name="startDate">
+        </div>
+        <div class="form-group">
+            <label class="col-form-label col-form-label-lg">Дата окончания</label>
+            <input type="date" name="endDate">
+        </div>
+    </fieldset>
+</form>
 
 
-    <input type="submit" value="add">
+
+    <h1>Добавление нового свидетельства государственной регистрации</h1>
+<form>
+    <fieldset>
+        <div class="form-group">
+            <label class="col-form-label col-form-label-lg">id</label>
+            <input type="text" name="certificateId" value="${user.userId}">
+        </div>
+        <div class="form-group">
+            <label class="col-form-label col-form-label-lg">УНП</label>
+            <input type="text" name="unicStateNumber">
+        </div>
+        <div class="form-group">
+            <label class="col-form-label col-form-label-lg">Адрес организации</label>
+            <input type="text" name="organizationAddress">
+        </div>
+        <div class="form-group">
+            <label class="col-form-label col-form-label-lg">Название организации</label>
+            <input type="text" name="organizationName">
+        </div>
+        <button class="btn btn-primary" type="submit" value="add">Добавить документы</button>
+    </fieldset>
+
 </form>
 
 </body>
