@@ -6,6 +6,7 @@
     <meta http-equiv="x-ua-compatible" content="IE=edge">
     <link rel="stylesheet" href="../../style/bootstrap.css">
 </head>
+
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <a class="navbar-brand" href="./index.jsp">Мониторинг декларантов</a>
@@ -29,7 +30,9 @@
         </ul>
     </div>
 </nav>
+
 <h1>Добавить пользователя</h1>
+
 <table class="table-hover">
     <tbody>
     <tr class="table-success">
@@ -65,31 +68,31 @@
     <fieldset>
         <div class="form-group" hidden>
             <label class="col-form-label col-form-label-lg">номер заявления</label>
-            <input type="text" name="claimId" value="${user.userId}">
+            <input class="form-control" type="text" name="claimId" value="${user.userId}">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Имя</label>
-            <input type="text" name="claimFirstName" value="${user.firstName}">
+            <input class="form-control" type="text" name="claimFirstName" value="${user.firstName}">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Фамилия</label>
-            <input type="text" name="claimLastName" value="${user.lastName}">
+            <input class="form-control" type="text" name="claimLastName" value="${user.lastName}">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Отчество</label>
-            <input type="text" name="claimPatronymic" value="${user.patronymic}">
+            <input class="form-control" type="text" name="claimPatronymic" value="${user.patronymic}">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Дата заполнения</label>
-            <input type="date" name="signStartDate">
+            <input class="form-control"  type="date" name="signStartDate">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Дата окончания</label>
-            <input type="date" name="signEndDate">
+            <input class="form-control" type="date" name="signEndDate">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Идентификационный номер</label>
-            <input type="text" name="signIdentNumber">
+            <input class="form-control" type="text" name="signIdentNumber">
         </div>
     </fieldset>
 
@@ -99,23 +102,23 @@
     <fieldset>
         <div class="form-group" hidden>
             <label class="col-form-label col-form-label-lg">Номер контракта</label>
-            <input type="text" name="contractId" value="${user.userId}">
+            <input class="form-control" type="text" name="contractId" value="${user.userId}">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Название организации</label>
-            <input type="text" name="workName">
+            <input class="form-control" type="text" name="workName">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Адрес организации</label>
-            <input type="text" name="workAddress" >
+            <input class="form-control" type="text" name="workAddress" >
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Дата начала работы</label>
-            <input type="date" name="workStartDate" >
+            <input class="form-control" type="date" name="workStartDate" >
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Дата окончания контракта</label>
-            <input type="date" name="workEndDate">
+            <input class="form-control" type="date" name="workEndDate">
         </div>
     </fieldset>
 

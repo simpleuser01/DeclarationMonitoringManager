@@ -43,43 +43,43 @@
     <fieldset>
         <div class="form-group" hidden>
             <label class="col-form-label col-form-label-lg">Номер пользователя</label>
-            <input type="text" name="userId" value="${user.userId}">
+            <input class="form-control" type="text" name="userId" value="${user.userId}">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Имя</label>
-            <input type="text" name="firstName" value="${user.firstName}">
+            <input class="form-control" type="text" name="firstName" value="${user.firstName}">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Фамилия</label>
-            <input type="text" name="lastName" value="${user.lastName}">
+            <input class="form-control" type="text" name="lastName" value="${user.lastName}">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Отчество</label>
-            <input type="text" name="patronymic" value="${user.patronymic}">
+            <input class="form-control" type="text" name="patronymic" value="${user.patronymic}">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Серия паспорта</label>
-            <input type="text" name="series" value="${user.series}">
+            <input  class="form-control" type="text" name="series" value="${user.series}">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Номер паспорта</label>
-            <input type="text" name="seriesNumber" value="${user.seriesNumber}">
+            <input class="form-control" type="text" name="seriesNumber" value="${user.seriesNumber}">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Идентификационный номер</label>
-            <input type="text" name="identNumber" value="${user.identNumber}">
+            <input class="form-control" type="text" name="identNumber" value="${user.identNumber}">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Дата рождения</label>
-            <input type="date" name="birthDate" value="${user.birthDate}">
+            <inputclass="form-control"  type="date" name="birthDate" value="${user.birthDate}">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Кем выдан паспорт</label>
-            <input type="text" name="stateAgency" value="${user.stateAgency}">
+            <input class="form-control" type="text" name="stateAgency" value="${user.stateAgency}">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Дата выдачи паспорта</label>
-            <input type="date" name="dateStateAgency" value="${user.dateStateAgency}">
+            <input class="form-control" type="date" name="dateStateAgency" value="${user.dateStateAgency}">
         </div>
     </fieldset>
 
@@ -88,31 +88,31 @@
     <fieldset>
         <div class="form-group" hidden>
             <label class="col-form-label col-form-label-lg">Номер пользователя</label>
-            <input type="text" name="claimId" value="${user.userId}">
+            <input class="form-control" type="text" name="claimId" value="${user.userId}">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Имя пользователя</label>
-            <input type="text" name="claimFirstName" value="${user.claim.claimFirstName}">
+            <input class="form-control" type="text" name="claimFirstName" value="${user.claim.claimFirstName}">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Фамилия</label>
-            <input type="text" name="claimLastName" value="${user.claim.claimLastName}">
+            <input class="form-control" type="text" name="claimLastName" value="${user.claim.claimLastName}">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Отчество</label>
-            <input type="text" name="claimPatronymic" value="${user.claim.claimPatronymic}">
+            <input class="form-control" type="text" name="claimPatronymic" value="${user.claim.claimPatronymic}">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Дата заполнения</label>
-            <input type="date" name="signStartDate" value="${user.claim.signStartDate}">
+            <input class="form-control" type="date" name="signStartDate" value="${user.claim.signStartDate}">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Дата окончания</label>
-            <input type="date" name="signEndDate" value="${user.claim.signEndDate}">
+            <input class="form-control" type="date" name="signEndDate" value="${user.claim.signEndDate}">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Идентификационный номер</label>
-            <input type="text" name="signIdentNumber" value="${user.claim.signIdentNumber}">
+            <input class="form-control" type="text" name="signIdentNumber" value="${user.claim.signIdentNumber}">
         </div>
     </fieldset>
 
@@ -122,23 +122,23 @@
     <fieldset>
         <div class="form-group" hidden>
             <label class="col-form-label col-form-label-lg">Номер контракта</label>
-            <input type="text" name="contractId" value="${user.userId}">
+            <input class="form-control" type="text" name="contractId" value="${user.userId}">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Название организации</label>
-            <input type="text" name="workName" value="${user.contract.workName}">
+            <input class="form-control" type="text" name="workName" value="${user.contract.workName}">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Адрес организации</label>
-            <input type="text" name="workAddress" value="${user.contract.workAddress}">
+            <input class="form-control" type="text" name="workAddress" value="${user.contract.workAddress}">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Дата начала работы</label>
-            <input type="date" name="workStartDate" value="${user.contract.workStartDate}">
+            <input class="form-control" type="date" name="workStartDate" value="${user.contract.workStartDate}">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Дата окончания контракта</label>
-            <input type="date" name="workEndDate" value="${user.contract.workEndDate}">
+            <input class="form-control" type="date" name="workEndDate" value="${user.contract.workEndDate}">
         </div>
     </fieldset>
 
@@ -147,27 +147,27 @@
     <fieldset>
         <div class="form-group" hidden>
             <label class="col-form-label col-form-label-lg">Номер доверенности</label>
-            <input type="text" name="proxyId" value="${user.userId}">
+            <input class="form-control"  type="text" name="proxyId" value="${user.userId}">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Имя</label>
-            <input type="text" name="proxyFirstName" value="${user.proxy.proxyFirstName}">
+            <input class="form-control" type="text" name="proxyFirstName" value="${user.proxy.proxyFirstName}">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Фамилия</label>
-            <input type="text" name="proxyLastName" value="${user.proxy.proxyLastName}">
+            <input class="form-control" type="text" name="proxyLastName" value="${user.proxy.proxyLastName}">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Отчество</label>
-            <input type="text" name="proxyPatronymic" value="${user.proxy.proxyPatronymic}">
+            <input class="form-control" type="text" name="proxyPatronymic" value="${user.proxy.proxyPatronymic}">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Дата заполнения</label>
-            <input type="date" name="startDate" value="${user.proxy.startDate}">
+            <input class="form-control" type="date" name="startDate" value="${user.proxy.startDate}">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Дата окончания</label>
-            <input type="date" name="endDate" value="${user.proxy.endDate}">
+            <input class="form-control" type="date" name="endDate" value="${user.proxy.endDate}">
         </div>
 
     </fieldset>
@@ -179,19 +179,19 @@
     <fieldset>
         <div class="form-group" hidden>
             <label class="col-form-label col-form-label-lg">Номер свидетельства государственной регистрации</label>
-            <input type="text" name="certificateId" value="${user.userId}">
+            <input class="form-control" type="text" name="certificateId" value="${user.userId}">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">УНП</label>
-            <input type="text" name="unicStateNumber" value="${user.stateCertificate.unicStateNumber}">
+            <input  class="form-control" type="text" name="unicStateNumber" value="${user.stateCertificate.unicStateNumber}">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Адрес организации</label>
-            <input type="text" name="organizationAddress" value="${user.stateCertificate.organizationAddress}">
+            <input class="form-control" type="text" name="organizationAddress" value="${user.stateCertificate.organizationAddress}">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Название организации</label>
-            <input type="text" name="organizationName" value="${user.stateCertificate.organizationName}">
+            <input class="form-control" type="text" name="organizationName" value="${user.stateCertificate.organizationName}">
         </div>
     </fieldset>
     <button class="btn btn-primary" type="submit">Редактировать</button>
