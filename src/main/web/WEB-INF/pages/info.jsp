@@ -8,12 +8,15 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    title>Мониторинг декларантов</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <link rel="stylesheet" href="../../style/bootstrap.css">
 </head>
 <body>
-<h1>USER INFO</h1>
-<table>
 
+<h1>Пользователи</h1>
+<table>
     <tr>
         <th>id</th>
         <th>first name</th>
@@ -43,7 +46,9 @@
 
         </tr>
 </table>
-<h1>CLAIM INFO</h1>
+
+<h1>Заявления</h1>
+
 <table>
 
     <tr>
@@ -69,40 +74,40 @@
 
     </tr>
 </table>
-<h1>CONTRACT INFO</h1>
+<h1>Контракты</h1>
 
-<table>
-    <tr>
+<table class="table-hover">
+    <tbody>
+    <tr class="table-success">
         <th>id</th>
-        <th>work name</th>
-        <th>work address</th>
-        <th>work start date</th>
-        <th>work end date</th>
+        <th>Название организации</th>
+        <th>Адрес организации</th>
+        <th>Дата начала контракта</th>
+        <th>Дата окончания контракта</th>
     </tr>
-
-    <tr>
+    <tr class="table-light">
         <td>${user.userId}</td>
         <td>${user.contract.workName}</td>
         <td>${user.contract.workAddress}</td>
         <td>${user.contract.workStartDate}</td>
         <td>${user.contract.workEndDate}</td>
     </tr>
+    </tbody>
 </table>
 
-<h1>PROXY INFO</h1>
+<h1>Доверенности</h1>
 
-<table>
-
-    <tr>
+<table class="table-hover">
+    <tbody>
+    <tr class="table-success">
         <th>id</th>
-        <th>first name</th>
-        <th>last name</th>
-        <th>patronymic</th>
-        <th>start date</th>
-        <th>end date</th>
+        <th>Имя</th>
+        <th>Фамилия</th>
+        <th>Отчество</th>
+        <th>Дата подписания</th>
+        <th>Дата окончания</th>
     </tr>
-
-    <tr>
+    <tr class="table-light">
         <td>${user.userId}</td>
         <td>${user.firstName}</td>
         <td>${user.lastName}</td>
@@ -110,27 +115,28 @@
         <td>${user.proxy.startDate}</td>
         <td>${user.proxy.endDate}</td>
     </tr>
+    </tbody>
 </table>
 
-<h1>STATE CERTIFICATE INFO</h1>
+<h1>Свидетельство государственной регистрации</h1>
 
-<table>
-
-    <tr>
+<table class="table-hover">
+    <tbody>
+    <tr class="table-success">
         <th>id</th>
-        <th>unic state number</th>
-        <th>organization address</th>
-        <th>organization name</th>
+        <th>УНП</th>
+        <th>Адрес организации</th>
+        <th>Название организации</th>
     </tr>
-
-    <tr>
+    <tr class="table-light">
         <td>${user.userId}</td>
         <td>${user.stateCertificate.unicStateNumber}</td>
         <td>${user.stateCertificate.organizationAddress}</td>
         <td>${user.stateCertificate.organizationName}</td>
     </tr>
+    </tbody>
 </table>
 
-<a href="/users/info">back</a>
+<a class="btn btn-primary" href="/users/info">Назад</a>
 </body>
 </html>

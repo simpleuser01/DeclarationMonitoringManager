@@ -8,40 +8,46 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Мониторинг декларантов</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <link rel="stylesheet" href="../../style/bootstrap.css">
 </head>
 <body>
+<div class="row">
     <form action="/users/info/claim/" method="post">
-        <p>
-            id
-            <input type="text" name="claimId" value="${user.userId}">
-        </p>
-        <p>
-            first name
-            <input type="text" name="firstName" value="${user.firstName}">
-        </p>
-        <p>
-            last name
-            <input type="text" name="lastName" value="${user.lastName}">
-        </p>
-        <p>
-            patronymic
-            <input type="text" name="patronymic" value="${user.patronymic}">
-        </p>
-        <p>
-            sign start
-            <input type="date" name="signStartDate">
-        </p>
-        <p>
-            sign end date
-            <input type="date" name="signEndDate">
-        </p>
-        <p>
-            ident number
-            <input type="text" name="identNumber">
-        </p>
-
-        <input type="submit" value="add">
+        <fieldset>
+            <div class="form-group">
+                <label class="col-form-label col-form-label-lg">id</label>
+                <input type="text" name="claimId" value="${user.userId}">
+            </div>
+            <div class="form-group">
+                <label class="col-form-label col-form-label-lg">Имя</label>
+                <input type="text" name="firstName" value="${user.firstName}">
+            </div>
+            <div class="form-group">
+                <label class="col-form-label col-form-label-lg">Фамилия</label>
+                <input type="text" name="lastName" value="${user.lastName}">
+            </div>
+            <div class="form-group">
+                <label class="col-form-label col-form-label-lg">Отчество</label>
+                <input type="text" name="patronymic" value="${user.patronymic}">
+            </div>
+            <div class="form-group">
+                <label class="col-form-label col-form-label-lg">Дата подписания</label>
+                <input type="date" name="signStartDate">
+            </div>
+            <div class="form-group">
+                <label class="col-form-label col-form-label-lg">Дата окончания</label>
+                <input type="date" name="signEndDate">
+            </div>
+            <div class="form-group">
+                <label class="col-form-label col-form-label-lg">Идентификационный номер</label>
+                <input type="text" name="identNumber">
+            </div>
+        </fieldset>
+        <button class="btn btn-primary" type="submit" value="add">Добавить заявление</button>
     </form>
+</div>
 </body>
 </html>
