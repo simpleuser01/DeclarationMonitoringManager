@@ -91,7 +91,6 @@
     <td>${user.claim.signIdentNumber}</td>
 </tr>
 </tbody>
-
 </table>
 
 <h1>Контракты</h1>

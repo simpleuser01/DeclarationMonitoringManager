@@ -12,7 +12,7 @@
     <title>Мониторинг декларантов</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="IE=edge">
-    <link rel="stylesheet">
+    <link rel="stylesheet" href="../../style/bootstrap.css">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -38,7 +38,8 @@
     </div>
 </nav>
 
-    <h1>Список пользователей</h1>
+    <h1>Список пользователей</h1
+
     <table class="table-hover">
         <tbody>
         <tr class="table-success">
