@@ -8,68 +8,92 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    title>Мониторинг декларантов</title>
+    <title>Мониторинг декларантов</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="IE=edge">
     <link rel="stylesheet" href="../../style/bootstrap.css">
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="./index.jsp">Мониторинг декларантов</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="./WEB-INF/pages/documents.jsp">Документы</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./WEB-INF/pages/claim.jsp">Заявления</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./WEB-INF/pages/users.jsp">Пользователи</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./WEB-INF/pages/info.jsp">Информация</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 
 <h1>Пользователи</h1>
-<table>
-    <tr>
+<table class="table-hover">
+    <tbody>
+    <tr class="table-success">
         <th>id</th>
-        <th>first name</th>
-        <th>last name</th>
-        <th>patronymic</th>
-        <th>series</th>
-        <th>series number</th>
-        <th>ident number</th>
-        <th>birth date</th>
-        <th>state agency</th>
-        <th>state agency date</th>
+        <th>Имя</th>
+        <th>Фамилия</th>
+        <th>Отчество</th>
+        <th>Серия паспорта</th>
+        <th>Номер паспорта</th>
+        <th>Идентификационный номер</th>
+        <th>Дата рождения</th>
+        <th>Кем выдан паспорт</th>
+        <th>Дата выдачи паспорта</th>
     </tr>
-
-        <tr>
-            <td>${user.userId}</td>
-            <td>${user.firstName}</td>
-            <td>${user.lastName}</td>
-            <td>${user.patronymic}</td>
-            <td>${user.series}</td>
-            <td>${user.seriesNumber}</td>
-            <td>${user.identNumber}</td>
-            <td>${user.birthDate}</td>
-            <td>${user.stateAgency}</td>
-            <td>${user.dateStateAgency}</td>
-
-        </tr>
-</table>
-
-<h1>Заявления</h1>
-
-<table>
-
-    <tr>
-        <th>id</th>
-        <th>first name</th>
-        <th>last name</th>
-        <th>patronymic</th>
-        <th>sign start date</th>
-        <th>sign end date</th>
-        <th>sign ident number</th>
-
-    </tr>
-
-    <tr>
+    <tr class="table-light">
         <td>${user.userId}</td>
         <td>${user.firstName}</td>
         <td>${user.lastName}</td>
         <td>${user.patronymic}</td>
-        <td>${user.claim.signStartDate}</td>
-        <td>${user.claim.signEndDate}</td>
-        <td>${user.claim.signIdentNumber}</td>
+        <td>${user.series}</td>
+        <td>${user.seriesNumber}</td>
+        <td>${user.identNumber}</td>
+        <td>${user.birthDate}</td>
+        <td>${user.stateAgency}</td>
+        <td>${user.dateStateAgency}</td>
+
     </tr>
+    </tbody>
 </table>
+
+<h1>Заявления</h1>
+
+<table class="table-hover">
+<tbody>
+<tr class="table-success">
+    <th>id</th>
+    <th>Имя</th>
+    <th>Фамилия</th>
+    <th>Отчество</th>
+    <th>Дата заполнения</th>
+    <th>Дата окончания</th>
+    <th>Идентификационный номер</th>
+</tr>
+<tr class="table-light">
+    <td>${user.userId}</td>
+    <td>${user.firstName}</td>
+    <td>${user.lastName}</td>
+    <td>${user.patronymic}</td>
+    <td>${user.claim.signStartDate}</td>
+    <td>${user.claim.signEndDate}</td>
+    <td>${user.claim.signIdentNumber}</td>
+</tr>
+</tbody>
+
+</table>
+
 <h1>Контракты</h1>
 
 <table class="table-hover">
