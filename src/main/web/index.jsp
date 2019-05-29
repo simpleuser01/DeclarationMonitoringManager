@@ -14,10 +14,6 @@
     <link rel="stylesheet" href="./style/bootstrap.css">
   </head>
   <body>
-
-<%--  <%@ page language="java" pageEncoding="UTF-8"%>--%>
-<%--  <jsp:forward page="/users" />--%>
-
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <a class="navbar-brand" href="./index.jsp">Мониторинг декларантов</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,7 +40,6 @@
   <div class="jumbotron">
     <h1 class="display-3">Main page</h1>
   </div>
-
 
   </body>
 </html>

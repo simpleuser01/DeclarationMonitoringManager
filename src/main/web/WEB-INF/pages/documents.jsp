@@ -32,12 +32,10 @@
 </nav>
 
 <div class="row">
-<h1>Добавить пользователя</h1>
-
-<table class="table-hover">
+    <h1>Добавить пользователя</h1>
+    <table class="table-hover">
     <tbody>
     <tr class="table-success">
-        <%--<th>Номер пользователя</th>--%>
         <th>Имя</th>
         <th>Фамилия</th>
         <th>Отчество</th>
@@ -59,7 +57,6 @@
         <td>${user.birthDate}</td>
         <td>${user.stateAgency}</td>
         <td>${user.dateStateAgency}</td>
-
     </tr>
     </tbody>
 </table>
@@ -70,7 +67,7 @@
             <label class="col-form-label col-form-label-lg">номер заявления</label>
             <input class="form-control" type="text" name="claimId" value="${user.userId}">
         </div>
-        <h1>Добавить новое заявление</h1>
+        <legend>Добавить новое заявление</legend>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Имя</label>
             <input class="form-control" type="text" name="claimFirstName" value="${user.firstName}">
@@ -96,7 +93,7 @@
             <input class="form-control" type="text" name="signIdentNumber">
         </div>
 
-    <h1>Добавить новый контракт</h1>
+        <legend>Добавить новый контракт</legend>
         <div class="form-group" hidden>
             <label class="col-form-label col-form-label-lg">Номер контракта</label>
             <input class="form-control" type="text" name="contractId" value="${user.userId}">
@@ -118,48 +115,48 @@
             <input class="form-control" type="date" name="workEndDate">
         </div>
 
-    <h1>Добавить новую доверенность</h1>
+        <legend>Добавить новую доверенность</legend>
         <div class="form-group" hidden>
             <label class="col-form-label col-form-label-lg">Номер доверенности</label>
-            <input type="text" name="proxyId" value="${user.userId}">
+            <input class="form-control" type="text" name="proxyId" value="${user.userId}">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Имя</label>
-            <input type="text" name="proxyFirstName">
+            <input class="form-control" type="text" name="proxyFirstName">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Фамилия</label>
-            <input type="text" name="proxyLastName">
+            <input class="form-control" type="text" name="proxyLastName">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Отчество</label>
-            <input type="text" name="proxyPatronymic">
+            <input class="form-control" type="text" name="proxyPatronymic">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Дата заполнения</label>
-            <input type="date" name="startDate">
+            <input class="form-control" type="date" name="startDate">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Дата окончания</label>
-            <input type="date" name="endDate">
+            <input class="form-control" type="date" name="endDate">
         </div>
 
-    <h1>Добавление нового свидетельства государственной регистрации</h1>
+        <legend>Добавление нового свидетельства государственной регистрации</legend>
         <div class="form-group" hidden>
             <label class="col-form-label col-form-label-lg">Номер свидетельства государственной регистрации</label>
-            <input type="text" name="certificateId" value="${user.userId}">
+            <input class="form-control" type="text" name="certificateId" value="${user.userId}">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">УНП</label>
-            <input type="text" name="unicStateNumber">
+            <input  class="form-control" type="text" name="unicStateNumber">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Адрес организации</label>
-            <input type="text" name="organizationAddress">
+            <input class="form-control" type="text" name="organizationAddress">
         </div>
         <div class="form-group">
             <label class="col-form-label col-form-label-lg">Название организации</label>
-            <input type="text" name="organizationName">
+            <input class="form-control" type="text" name="organizationName">
         </div>
         <button class="btn btn-primary" type="submit">Добавить документы</button>
     </fieldset>
